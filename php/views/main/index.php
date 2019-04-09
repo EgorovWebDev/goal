@@ -4,7 +4,7 @@
                     <h2>Adidas</h2>
                     <p class="model">copa 19</p>
                     <div class="form-buttons">
-                            <button class="buy-copa">Купить copa 19</button>
+                            <button class="buy-copa" data-hipeOrder='3'>Купить copa 19</button>
                             <button class="col-copa">Коллекция copa</button>
                     </div>
             </div>
@@ -36,8 +36,4 @@
                 <img src="source/img/main/puma_bg.png" alt="puma"> 
                 <img src="source/img/main/puma_bg_1.png" alt="puma"> 
         </section>
-         <?php 
-               $db = new Db();
-               var_dump($db->selectBrand('adidas'));
-        ?>
 </main>

@@ -1,17 +1,17 @@
-// $.ajax({
-//     method: 'GET',
-//     url: '/catalog?brend=puma',
-//     success: function(response){
-
-//         let ul = document.createElement('ul');
-//         response = JSON.parse(response);
-//         response.forEach(element => {
-//             let li = document.createElement('li');
-//             let a = document.createElement('a');
-//             a.innerHTML = element;
-//             li.appendChild(a); 
-//             ul.appendChild(li);
-//         }); 
-//         $('.catalog').append(ul);
-//     }
-// });
+$('.buy-copa').click(function(event){
+    let buyCopa = $(event.target).attr('data-hipeOrder');
+    console.log(buyCopa);
+    $.ajax({
+        url: 'api/copaCol',
+        data: {'hipeOrder':buyCopa},
+        type: 'POST',
+        cache: false,
+        success: function(data) {
+            let resp=JSON.parse(data);
+               // if (resp.error==0){
+                    location.href='goal/catalogs?'+data.order;
+                //}
+            alert("Данные успешно отправлены на сервер");
+        }
+    });
+});

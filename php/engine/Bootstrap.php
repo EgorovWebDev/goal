@@ -12,17 +12,25 @@ class Bootstrap
         'basket' => "basket",
         'contacts' => "contacts",
         'main' => "main",
-        'sign' => "sign"
+        'sign' => "sign",
+        'api'=> 'api'
     ];
 
     public function __construct()
     {
-        $url = $_GET["url"] ?? null;
+        
+        $url = $_GET["url"] ?? 'main';
         $url = strtolower($url);
         $url = explode("/", $url);
         $selectedPage = $url[0];
-        $additionalInfo = $url[1] ?? null;  
-        $view = new View($selectedPage);
-        $view->render();
+        $additionalInfo = $url[1] ?? null;
+        //var_dump($selectedPage);
+        if ($selectedPage=='api') {
+            
+            $api=new API($additionalInfo);
+        }
+        else {
+            $view = new View($selectedPage);
+        }
     }
 }
