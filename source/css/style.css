@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'msRef';
+}
+/*HEADER style*/
+header {
+    padding: 15px 0;
+    border-bottom: 3px solid #000000;
+}
+
+header > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 40px;
+}
+header > ul > li > a {
+    display: flex;
+    justify-content: space-around;
+}
+header > ul > li > a > img {
+    width: 65px;
+    height: 45px;
+}
+header > ul > li > a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+}
+header > ul > li:hover>a {
+    color:red;
+    text-decoration: underline;
+
+}
+header > ul > li:nth-child(8):hover>a{
+    color: #000000;
+    text-decoration: none;
+}
+
+header > ul > li:nth-child(2),
+header > ul > li:nth-child(3),
+header > ul > li:nth-child(4),
+header > ul > li:nth-child(5),
+header > ul > li:nth-child(6){
+    margin-top: 15px;
+}
+header > ul > li:nth-child(7) >a >img,
+header > ul > li:nth-child(8) >a >img {
+ width: 25px;
+ height: 25px;
+ margin-top: 15px;
+}
+.count{
+    font-size: 25px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+img {
+    width: 100%;
+    height: 100%;   
+}
+
+/*MAIN style*/
+.banner {
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+.banner > img {
+    width: 50%;
+}
+.banner > .info {
+    text-align: center;
+    width: 50%;
+}
+.info > h2 {
+    text-transform: uppercase;
+    font-size: 75px;
+    color: #000000;
+    margin-top: 50px;
+}
+.info > .model {
+    margin-top: 20px;
+    font-size: 35px;
+}
+.adidas-info{
+    background-color: #e5d7c6;
+}
+main > section:nth-child(2) > .info > .model {
+    color: #ffffff;
+}
+.nike-info {
+    background-color: #9a3941;
+}
+.puma-info {
+    background-color: #92aefb;
+}
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-buttons > button {
+    width: 250px;
+    height: 55px;
+    margin-top: 25px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    outline: none;
+    border: 2px solid #000000;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+    border: 2px solid #000000;
+}
+
+/*ABOUT US style*/
+.about-us{
+    padding: 33px 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #c6c6c6;
+    vertical-align: middle;
+    
+}
+.about-us > h3 {
+    width: 330px;
+    margin-top: 35px;
+    
+}
+.about-us > p {    
+    font-size: 15px;
+    font-weight: 700; 
+    width: 700px;
+}
+
+
+/*FOOTER style*/
+.footer-form > form > label {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 900;
+    margin-right: 35px;
+}
+.footer-form > form > label:first-child::before{
+    position: absolute;
+    content: url(../img/footer-mail__icon.png);
+    width: 50px;
+    height: 50px;
+    margin-left: -53px;
+    margin-top: 5px;
+
+}
+
+.footer-form > form > input[type="email"] {
+    outline: none;
+    font-family: 'msRef';
+    color: #000000;
+    width: 250px;
+    height: 35px;
+    padding-left: 15px;
+    border: none;
+
+}
+
+.footer-form > form > input[type="submit"]{
+    height: 35px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin-left: -40px;
+    padding: 5px;
+    font-weight: 700;
+}
+.footer-form > form > input[type="submit"]:hover{
+    background-color: #ffffff;
+    color: #ff0000;
+    transition: 0.3s;
+}
+
+
+.footer-form {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #444343;
+}
+.footer-form > form > h3 {
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.footer-form > h3::before{
+    content: url('../img/footer-mail__icon.png');
+    width: 30px;
+    height: 30px;
+
+}
+.footer-form > img {
+    width: 85px;
+    height: 45px;
+}
+.footer-info, .contacts {
+    background-color: #e0e0e0;
+}
+.footer-info > ul {
+    display: flex;
+    justify-content: space-around;
+}
+.footer-info> ul > li > h3 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+li{
+    list-style: none;
+}
+.contact > li > a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+}
+.contact > li {
+    margin-top: 10px;
+}
+.contact > li > a:hover {
+    color: #ff0000;
+    transition: 0.3s;
+}
+
+.contacts {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+.contacts > h3 {
+    text-transform: uppercase;
+}
+.contacts > ul {
+    display: flex;
+    justify-content: space-around;
+}
+.contacts > ul > li {
+    margin-left: 30px;
+}
+.contacts > ul > li > a > img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.helper{
+    width: 300px;
+}
+.helper-2{
+    width: 300px;
+}
+.footer-info > ul > li:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.helper, .about {
+    display: flex;
+    flex-wrap: wrap;
+}
+.helper > li, .about > li {
+    width: 50%;
+    margin-top: 5px;
+}
