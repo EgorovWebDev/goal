@@ -13,7 +13,7 @@ class API
     public function __construct($addInfo){
        
         $this->db = new Db();
-      //  $this->actions = $actions ?? null;
+         //  $this->actions = $actions ?? null;
         if (in_array($this->actions, $addInfo)) {
             $act=$this->actions[$addInfo];
             $this->$data=$this->db->$act($_POST['hipeOrder']);

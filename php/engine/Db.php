@@ -4,30 +4,29 @@ class Db{
     public function __construct(){
         $this->connect = new mysqli('localhost', 'root', '', 'goal');
     }
-    // public function selectBrand($brand){
-    //     $q = "SELECT * FROM brand where brand = ?";
-    //     $preparedStatement = $this->connect->prepare($q);
-    //     $preparedStatement->bind_param("s", $brand);
-    //     $preparedStatement->execute(); 
-    //     $result=$preparedStatement->get_result();
-    //     $preparedStatement->close();
-    //     return $result->fetch_array(MYSQLI_ASSOC);
-    // }
-
     public function selectAll(){
         $q = "SELECT * FROM goods";
         $data= $this->connect->query($q);
         $data->fetch_all(MYSQLI_ASSOC);
+        return $data;
     }
-    public function selectCollection($id){
-        $q = "SELECT * FROM goods WHERE collection = '".$collectio."' ";
+    public function  selectBrend($brend){
+        $q = "SELECT * FROM goods WHERE brend = '".$brend."' ";
         $data= $this->connect->query($q);
         $data->fetch_all(MYSQLI_ASSOC);
         return $data;
     }
-    public function selectModel(){
-        $q = "SELECT * FROM goode WHERE model = '".$collectio."' ";
+    public function selectCollection($collection){
+        $q = "SELECT * FROM goods WHERE collection = '".$collection."' ";
         $data= $this->connect->query($q);
         $data->fetch_all(MYSQLI_ASSOC);
+        return $data;
     }
+    public function selectModel($model){
+        $q = "SELECT * FROM goode WHERE model = '".$model."' ";
+        $data= $this->connect->query($q);
+        $data->fetch_all(MYSQLI_ASSOC);
+        return $data;
+    }
+
 }
