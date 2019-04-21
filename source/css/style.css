@@ -9,7 +9,9 @@ header {
     padding: 15px 0;
     border-bottom: 3px solid #000000;
 }
-
+.mobile-menu, .menu-burger{
+    display: none;
+}
 header > ul {
     list-style: none;
     display: flex;

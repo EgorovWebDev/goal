@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'msRef';
+    color: #ffffff;
+   
+}
+html{
+    background: url('../img/eror/bg.png');
+    background-image: no-repeat;
+    overflow-y: hidden;
+}
+html::after{
+    position: absolute;
+    content: url(../img/eror/man.png);
+    bottom: 0;
+    margin-bottom: -10px;
+}
+.eror > h2 {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+.eyes{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+.eye{
+    width: 280px;
+    height: 140px;
+    background: #ffffff;
+    display: inline-block;
+    margin: 40px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.pupil{
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    border: 14px solid #437DD4	;
+  }
+  

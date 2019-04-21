@@ -1,0 +1,37 @@
+@media (max-width: 992px){
+ header{
+     display: none;
+ }
+ .mobile-menu{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+.menu-burger, .menu-burger::after, .menu-burger::before{
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    top: 50%;
+    margin-top: -1px;
+    background-color: #333333;
+}
+.menu-burger::before{
+    transition: all 0.2s;
+    content: '';
+    margin-top: -9px;
+}
+.menu-burger::after{
+    transition: all 0.2s;
+    content: '';
+    margin-top: 8px;
+}
+}

@@ -7,7 +7,9 @@
     <link rel="icon" href="source/img/logo.png">
 
     <link rel="stylesheet" href="source/css/fonts.css">
-    <link rel="stylesheet" href="source/css/style.css"> 
+    <link rel="stylesheet" href="source/css/style.css">
+    <link rel="stylesheet" href="source/css/media.css"> 
+
 
     <title>Goal!</title>
 </head>
@@ -24,3 +26,22 @@
             <li><a href=""><p class="count">0</p><img src="source/img/header/shopping-cart.png" alt="search"></a></li>
         </ul>
     </header>
+
+    <div class="mobile-menu">
+        <span class="menu-burger"></span>
+    </div>
+
+    <!-- <div class="menu">
+        <ul>
+            <li><a href="main">Главная</a></li>
+            <li><a href="catalog">Каталог</a></li>
+            <li><a href="about">О нас</a></li>
+            <li><a href="contacts">Контакты</a></li>
+            <li><a href="help">Помощь</a></li>
+            <li><a href="search">Поиск</a></li>
+            <li><a href="sign">Вход</a></li>
+            <li><a href="search">Поиск</a></li>
+            <li><a href="card">Корзина</a></li>
+        </ul>
+    </div> -->
+

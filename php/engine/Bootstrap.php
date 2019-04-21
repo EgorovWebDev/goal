@@ -24,13 +24,16 @@ class Bootstrap
         $url = explode("/", $url);
         $selectedPage = $url[0];
         $additionalInfo = $url[1] ?? null;
-        //var_dump($selectedPage);
-        if ($selectedPage=='api') {
-            
-            $api=new API($additionalInfo);
-        }
-        else {
-            $view = new View($selectedPage);
+        if (in_array($selectedPage,$this->routingTable)){
+            if ($selectedPage=='api') {
+                
+                $api=new API($additionalInfo);
+            }
+            else {
+                $view = new View($selectedPage);
+            }
+        }else{
+            require_once ('php/views/eror/index.php');
         }
     }
 }
