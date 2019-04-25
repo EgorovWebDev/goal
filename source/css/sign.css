@@ -1,0 +1,100 @@
+
+#login{
+	position: absolute;
+	top: 0px;
+	width: 88%;	
+	padding: 18px 6% 96px 6%;
+	margin: 0 0 35px 0;
+	background: rgb(247, 247, 247);
+	border: 1px solid rgba(147, 184, 189,0.8);
+	border-radius: 5px;
+		
+}
+#wrapper{
+	width: 60%;
+	right: 0px;
+	min-height: 560px;	
+	margin: 100px auto;	
+	width: 500px;
+	position: relative;	
+}
+/* Вход */
+#wrapper h1{
+	font-size: 48px;
+	color:black;
+	padding: 2px 0 10px 0;
+	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+#wrapper label{
+	color:black;
+	position: relative;
+}
+
+#wrapper input:not([type="checkbox"]){
+	width: 92%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;	
+	box-sizing : content-box;
+}
+
+
+#wrapper p.button input{
+  width: 30%;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  background: #ff0000;
+  transition: 0.2s;	
+  margin-bottom: 10px;
+
+}
+input[type="submit"]{
+	border: none;
+}
+#wrapper p.button input:hover{
+	background: #ff0000; 
+}
+#wrapper p.button input:active{
+	background: #ff0000;
+  box-shadow: 0 3px #ff0000 inset;
+}
+p.login.button{
+	text-align: right;
+	margin: 5px 0;
+}
+
+p.change_link{
+	position: absolute;
+	color: rgb(127, 124, 124);
+	left: 0px;
+	height: 20px;
+	width: 440px;
+	padding: 17px 30px 20px 30px;
+	font-size: 16px	;
+	text-align: right;
+	border-top: 1px solid rgb(219, 229, 232);
+
+}
+/* Присоединяйтесь */
+#wrapper p.change_link a {
+	display: inline-block;
+	font-weight: bold;
+	background: rgb(247, 248, 241);
+	padding: 2px 6px;
+	color: black;
+	margin-left: 10px;
+	text-decoration: none;
+	border-radius: 4px;
+	border: 1px solid rgb(203, 213, 214);
+	margin-top: 10px;
+	
+}
+#wrapper p.change_link a:hover {
+	color: #ff0000;
+	background: rgb(247, 247, 247);
+	border: 1px solid #ff0000;
+}

@@ -16,6 +16,7 @@ class Bootstrap
         'api'=> 'api',
         'basket' => 'basket',
         'help' => 'help',
+        'registr'=> 'registr'
     ];
 
     public function __construct()

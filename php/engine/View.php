@@ -12,7 +12,7 @@ class  View
     private $dynamicPage = [
         'catalog' => "selectAll",
     ];
-    private $staticPage =["about", "contacts", "main", "sign", "basket", "help"];
+    private $staticPage =["about", "contacts", "main", "sign", "basket", "help", "registr"];
     private $method;
     private $db;
 
