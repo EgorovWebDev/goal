@@ -12,6 +12,33 @@ header {
 .mobile-menu, .menu-burger{
     display: none;
 }
+.menu {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: #e5d7c6;
+    position: fixed ; 
+    z-index: 99;
+    left: -100vw;
+    transition:  all .3s;
+}
+.menu_active {
+    left: 0;
+}
+.menu > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu > ul > li > a {
+    line-height: 3;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 header > ul {
     list-style: none;
     display: flex;
@@ -153,12 +180,16 @@ button:hover {
 }
 .footer-form > form > label:first-child::before{
     position: absolute;
+    z-index: 1;
     content: url(../img/footer-mail__icon.png);
     width: 50px;
     height: 50px;
     margin-left: -53px;
-    margin-top: 5px;
-
+}
+.footer-form > form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .footer-form > form > input[type="email"] {
@@ -300,7 +331,7 @@ li{
     text-align: center;
 }
 .advantages > li > p {
-    font-size: 14px;
+    font-size: 16px;
 }
 .advantages > li > img {
     width: 90px;

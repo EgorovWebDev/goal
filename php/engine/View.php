@@ -34,7 +34,7 @@ class  View
         if (!empty($static)){
           
             $m=$this->method; 
-            $this->$data=$this->db->$m();
+            $this->data=$this->db->$m();
         }
         else {
             require_once ('php/views/'.$this->page.'/index.php');

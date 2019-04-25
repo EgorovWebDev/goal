@@ -8,7 +8,8 @@
 }
 html{
     background: url('../img/eror/bg.png');
-    background-image: no-repeat;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
     overflow-y: hidden;
 }
 html::after{
@@ -51,4 +52,8 @@ html::after{
     border-radius: 50%;
     border: 14px solid #437DD4	;
   }
-  
+@media (max-width: 992px){
+    .eyes{
+        display: none;
+     }
+}

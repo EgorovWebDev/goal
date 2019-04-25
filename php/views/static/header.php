@@ -27,11 +27,11 @@
         </ul>
     </header>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu ">
         <span class="menu-burger"></span>
     </div>
-
-    <!-- <div class="menu">
+ 
+     <div class="menu">
         <ul>
             <li><a href="main">Главная</a></li>
             <li><a href="catalog">Каталог</a></li>
@@ -43,5 +43,5 @@
             <li><a href="search">Поиск</a></li>
             <li><a href="card">Корзина</a></li>
         </ul>
-    </div> -->
+    </div>  
 
