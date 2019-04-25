@@ -13,7 +13,9 @@ class Bootstrap
         'contacts' => "contacts",
         'main' => "main",
         'sign' => "sign",
-        'api'=> 'api'
+        'api'=> 'api',
+        'basket' => 'basket',
+        'help' => 'help',
     ];
 
     public function __construct()

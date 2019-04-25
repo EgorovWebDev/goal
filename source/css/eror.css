@@ -8,7 +8,6 @@
 }
 html{
     background: url('../img/eror/bg.png');
-    /* background-size: cover; */
     background-repeat: no-repeat;
     overflow-y: hidden;
 }
