@@ -10,9 +10,11 @@ class Db{
         'errorInfo' => '', 
     ]; 
     public function selectAll(){
-        $q = "SELECT  name, price, img from goods where id_size=1";
-        $data = $this->connect->query($q);
-        return $data;
+        $query = "set names utf8";
+        $connect->query($query);
+        $query = "SELECT  name, price, img from goods where id_size=1";
+        $data = $this->connect->query($query);
+        
     }
     public function  selectBrend($brend){
         $q = "SELECT * FROM goods WHERE brend = '".$brend."' ";
@@ -64,3 +66,6 @@ class Db{
     }
 
 }
+
+
+

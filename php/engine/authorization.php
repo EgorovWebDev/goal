@@ -1,6 +1,6 @@
 
 <?php
-require '../Db.php';
+require './Db.php';
 $user = [];
 foreach ($_POST as $key => $value){
     $keyUser = strval(htmlspecialchars($key));

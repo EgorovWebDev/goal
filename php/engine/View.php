@@ -9,8 +9,8 @@ class  View
     const FOOTER = 'php/views/static/footer.php';
     public $data;
     public $page;
-    private $dynamicPage = [
-        'catalog' => "selectAll",
+    public $dynamicPage = [
+        "catalog" => "selectAll",
     ];
     private $staticPage =["about", "contacts", "main", "sign", "basket", "help", "registr"];
     private $method;

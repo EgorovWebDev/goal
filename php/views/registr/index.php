@@ -3,7 +3,7 @@
     
 </head>
 
-<form action="../php/registration.php" method="post">				
+<form action="php/engine/registration.php" method="post">				
         <div id="wrapper">
             <div id="login">
                 <h1>Регистрация</h1> 
