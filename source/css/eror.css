@@ -9,7 +9,8 @@
 html{
     background: url('../img/eror/bg.png');
     background-repeat: no-repeat;
-    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 html::after{
     position: absolute;
@@ -55,4 +56,11 @@ html::after{
     .eyes{
         display: none;
      }
+}
+@media (max-width: 470px){
+    html::after{
+        width: 60%;
+        height: 60%;
+        margin-bottom: -35px;
+    }
 }

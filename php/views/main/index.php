@@ -1,3 +1,14 @@
+<?php
+require_once "php/engine/Db.php";
+$this->db = new Db(); 
+$a = $this->db->selectSlick();
+?>
+<head>
+        <link rel="stylesheet" type="text/css" href="source/css/slider.css"/>
+        <link rel="stylesheet" type="text/css" href="source/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="source/slick/slick-theme.css"/>  
+        
+</head>
 <main>
         <section class="banner">
             <div class="info adidas-info">
@@ -36,4 +47,27 @@
                 <img src="source/img/main/puma_bg.png" alt="puma"> 
                 <img src="source/img/main/puma_bg_1.png" alt="puma"> 
         </section>
+
+        <section class="slick">
+        <h1>Популярные товары</h1>
+        <div class="slider">   
+        <?php
+            foreach ($a as $key => $value) {
+                echo '          
+      <div class="slider-item">
+            <div class="slider-item__img">
+                <div><img src="'.$a[$key]["img"].'.jpg"></div>
+            </div>
+            <div class="slider-item__text">
+                <p>'.$a[$key]["name"].'</p>
+                <p><mark>'.$a[$key]["price"].' ₽</mark></p>
+            </div>
+        </div>
+                    ';
+            } 
+
+             ?>
+             </div>
+        </section>
 </main>
+

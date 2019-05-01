@@ -13,18 +13,19 @@
 #wrapper{
 	width: 60%;
 	right: 0px;
-	min-height: 560px;	
+	min-height: 650px;	
 	margin: 100px auto;	
 	width: 500px;
 	position: relative;	
+	margin-top: 45px;
 }
 /* Вход */
 #wrapper h1{
 	font-size: 48px;
 	color:black;
-	padding: 2px 0 10px 0;
+	padding: 2px 55px 10px 0;
 	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
-	font-weight: bold;
+	font-weight:bold;
 	text-align: center;
 	padding-bottom: 30px;
 }
@@ -33,23 +34,23 @@
 	position: relative;
 }
 
-#wrapper input:not([type="checkbox"]){
-	width: 92%;
+#wrapper input:not([type="submit"]){
+	width: 98%;
 	margin-top: 4px;
 	padding: 10px 5px 10px 32px;	
-	box-sizing : content-box;
+	
 }
-
-
-#wrapper p.button input{
-  width: 30%;
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-  padding: .8em 1em calc(.8em + 3px);
-  background: #ff0000;
-  transition: 0.2s;	
-  margin-bottom: 10px;
+.login_button input{
+	width: 30%;
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+	padding: .8em 1em calc(.8em + 3px);
+	background: #ff0000;
+	transition: 0.2s;	
+	margin-bottom: 10px;
+    margin-left: 65%;  
+  
 
 }
 input[type="submit"]{
@@ -59,8 +60,8 @@ input[type="submit"]{
 	background: #ff0000; 
 }
 #wrapper p.button input:active{
-	background: #ff0000;
-  box-shadow: 0 3px #ff0000 inset;
+  	background: #ff0000;
+  	box-shadow: 0 3px #ff0000 inset;
 }
 p.login.button{
 	text-align: right;

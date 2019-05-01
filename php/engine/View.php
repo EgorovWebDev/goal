@@ -9,23 +9,24 @@ class  View
     const FOOTER = 'php/views/static/footer.php';
     public $data;
     public $page;
-    public $dynamicPage = [
-        "catalog" => "selectAll",
-    ];
-    private $staticPage =["about", "contacts", "main", "sign", "basket", "help", "registr"];
+    private $dynamicPage = [
+        'catalog' => "selectAll",
+];
+    private $staticPage =["about", "contacts", "main", "sign", "basket", "help", "registr", "card"];
     private $method;
     private $db;
+    
 
 
     public function __construct($page = null){
-        $this->db = new Db();
+        $this->db = new Db(); 
         $this->page = $page ?? null;
         if (in_array($this->page,$this->staticPage)) {
             $this->render();    
         }
         else {
             $this->method=$this->dynamicPage[$this->page];
-            $this->render('m'); //TO DO - передавать параметр для рендера
+            $this->render($stmt); //TO DO - передавать параметр для рендера
         }
     }
 

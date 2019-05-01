@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="source/css/fonts.css">
     <link rel="stylesheet" href="source/css/style.css">
     <link rel="stylesheet" href="source/css/media.css">
+    <link rel="stylesheet" href="source/css/catalog.css">
     
     <title>Goal!</title>
 </head>

@@ -28,7 +28,7 @@
                     <input type="tel" name="contacts" placeholder="Введите номер телефона" required><br>
                 </p> 
                 
-                <p class="login button"> 
+                <p class="login_button"> 
                     <input type="submit" value="Создать"> 
                 </p>
             </div>

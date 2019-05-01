@@ -1,71 +1,65 @@
 <?php
+
 class Db{
-    public $connect;
+    private $connect;
     public function __construct(){
-        $this->connect = new mysqli('localhost', 'root', '', 'goal');
+        $this->connect = new PDO('mysql:host=localhost;dbname=goal', 'root', '');
     }
-        public $response = [
-        'status' => false , 
-        'data' => [] , 
-        'errorInfo' => '', 
-    ]; 
     public function selectAll(){
-        $query = "set names utf8";
-        $connect->query($query);
-        $query = "SELECT  name, price, img from goods where id_size=1";
-        $data = $this->connect->query($query);
-        
-    }
-    public function  selectBrend($brend){
-        $q = "SELECT * FROM goods WHERE brend = '".$brend."' ";
-        $data= $this->connect->query($q);
-        $data->fetch_all(MYSQLI_ASSOC);
+        $stmt = $this->connect->query("SELECT id, name, price, img from goods where id_size=1");   
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
-    public function selectCollection($collection){
-        $q = "SELECT * FROM goods WHERE collection = '".$collection."' ";
-        $data= $this->connect->query($q);
-        $data->fetch_all(MYSQLI_ASSOC);
+    public function selectSlick(){
+        $stmt = $this->connect->query("SELECT id, name, price, img from goods where id in (1, 5, 9, 13, 17, 29)");   
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
-    public function selectModel($model){
-        $q = "SELECT * FROM goode WHERE model = '".$model."' ";
-        $data= $this->connect->query($q);
-        $data->fetch_all(MYSQLI_ASSOC);
+    public function selectPhotos(){
+        $stmt = $this->connect->query("SELECT id, photo from photos where id in (1, 2, 3, 4, 5) ");   
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
+    public function selectInfo(){
+        $stmt = $this->connect->query("SELECT name, price, id from goods where id=1");   
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+    }
+    public function selectDescription(){
+        $stmt = $this->connect->query("SELECT description from goods where id=1");   
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+    }
+    
 
- 
-    public function registration($login , $password, $email, $fio, $contacts){
-        if ($this->getLogin($login)['status']) {
+
+public function registration($login , $password, $email, $fio, $contacts){
+    if ($this->getLogin($login)['status']) {
+        $this->response['status'] = false;
+        $this->response['errorInfo'] = 'user already exists';
+    } else {
+        $sth = $this->connect->prepare("INSERT INTO user (login, password, email, fio, contacts) VALUES (?, ?, ?, ?, ?)");
+        $status = $sth->execute(Array($login, $password, $email, $fio, $contacts));
+        if (!$status) {
             $this->response['status'] = false;
-            $this->response['errorInfo'] = 'user already exists';
+            $this->response['errorInfo'] = 'error of insert into database';
         } else {
-            $sth = $this->connect->prepare("INSERT INTO user (login, password, email, fio, contacts) VALUES (?, ?, ?, ?, ?)");
-            $status = $sth->execute(Array($login, $password, $email, $fio, $contacts));
-            if (!$status) {
-                $this->response['status'] = false;
-                $this->response['errorInfo'] = 'error of insert into database';
-            } else {
-                $this->response['status'] = true;
-            } 
-        }
-        return $this->response;
-    }   
-    public function getLogin($login){
-        $sth = $this->connect->prepare("SELECT * FROM user WHERE login = ?");
-        $sth->execute(Array($login));
-        if ($data = $sth->fetch()){
             $this->response['status'] = true;
-            $this->response['data'] = $data;
-        } else {
-            $this->response['status'] = false;
-            $this->response['errorInfo'] = 'error of select from database';
-        }
-        return $this->response;
+        } 
     }
-
+    return $this->response;
+}   
+public function getLogin($login){
+    $sth = $this->connect->prepare("SELECT * FROM user WHERE login = ?");
+    $sth->execute(Array($login));
+    if ($data = $sth->fetch()){
+        $this->response['status'] = true;
+        $this->response['data'] = $data;
+    } else {
+        $this->response['status'] = false;
+        $this->response['errorInfo'] = 'error of select from database';
+    }
+    return $this->response;
 }
-
-
+}
 

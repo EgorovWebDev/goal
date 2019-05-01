@@ -8,9 +8,7 @@ $('.buy-copa').click(function(event){
         cache: false,
         success: function(data) {
             let resp=JSON.parse(data);
-               // if (resp.error==0){
                     location.href='goal/catalogs?'+data.order;
-                //}
             alert("Данные успешно отправлены на сервер");
         }
     });

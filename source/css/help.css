@@ -1,6 +1,5 @@
-body > section{
-    width: 90%;
-    margin:  0 auto;
+.help{
+    padding: 25px;
 }
 h2{
     font-size: 30px;

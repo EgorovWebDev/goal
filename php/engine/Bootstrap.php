@@ -1,7 +1,5 @@
 <?php
-/** class Bootstrap
- * Получает url  и сравнивает его с страницами.
- */
+
 class Bootstrap
 {
    public $routingTable = [
@@ -16,7 +14,8 @@ class Bootstrap
         'api'=> 'api',
         'basket' => 'basket',
         'help' => 'help',
-        'registr'=> 'registr'
+        'registr'=> 'registr',
+        'card'=> 'card'
     ];
 
     public function __construct()

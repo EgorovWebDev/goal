@@ -1,0 +1,88 @@
+*{
+    outline:none;
+}
+main {
+    display: flex;
+    width: 1300px;
+    margin: auto;
+}
+.sliders {
+    display: inline;
+    width: 500px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.order {
+    display: inline;
+    margin-top: 100px;
+    width: 300px;
+    margin-left: 300px;
+}
+.name {
+    font-size: 32px;
+    font-weight: bold;
+}
+.price {
+    margin-top: 30px;
+    font-size: 24px;
+}
+.btn_card {
+    width: 300px;
+    height: 50px;
+    background: red;
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-top: 50px;
+    cursor: pointer;
+    display: block;
+}
+.btn_card:hover {
+    background: white;
+    color: red;
+    border: 1px solid red;
+}
+.order > p {
+    border-bottom: 1px solid grey;
+    padding-bottom: 30px;
+}
+.slider1 {
+    width: 400px;
+    margin-left: 100px;
+ 
+}
+.slider2 {
+    width: 500px;
+    margin: 20px auto;
+    margin-top: 50px;
+    float: left;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+img {
+    margin: auto;
+    width: 80px;
+    height: auto;
+}
+.main-img {
+    width: 400px;
+    height: auto;
+}
+.desc {
+    display: block;
+    width: 100%;
+    margin: auto;
+    background: #f2f2f2;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+.desc > p {
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+ 

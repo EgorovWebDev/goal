@@ -2,7 +2,7 @@
             <h3>ИНТЕРНЕТ-МАГАЗИН ФУТБОЛЬНОЙ ОБУВИ GOAL</h3>
     
             <p>Если Вы не можете представить свою жизнь без футбола и уже завтра хотите выйти на поле и начать 
-            тренировки, то добро пожаловать в наш интернет-магазин футбольной обуви “FootBoots”.Мы предлагаем
+            тренировки, то добро пожаловать в наш интернет-магазин футбольной обуви “GOAL”.Мы предлагаем
             Вам самый широкий выбор профессиональной футбольной обуви высочайшего качества и по самым 
             низким ценам. У нас Вы найдете бутсы самых популярных брендов из коллекций Nike, Adidas, Puma, 
             Tiempo, Mizuno, Under Armour, предназначенные для игры на травянистых покрытиях, а также футзалки
@@ -14,9 +14,9 @@
 
     <section class="footer-form">
         <img src="source/img/logo.png" alt="logo">
-        <form action="#" method="POST">
+        <form action="mailer/smart.php" method="POST">
             <label for="sale">ПОДПИСАТЬСЯ НА НОВОСТИ<br> И ПОЛУЧИТЬ СКИДКУ 10%</label>
-            <input type="email" name="sale" placeholder="EMAIL">
+            <input type="email" name="email" placeholder="EMAIL">
             <input type="submit" value="Получить" name="sale-submit">
         </form>
     </section>
@@ -92,9 +92,15 @@
 
 </footer>
 
+
+<script src="source/js/jquery-3.1.1.min.js"></script>
 <script src="source/js/jquery.min.js"></script>
 <script src="source/js/menu.js"></script>
 <script src="source/js/main.js"></script>
+<script type="text/javascript" src="source/js/script.js"></script>
+<script type="text/javascript" src="source/slick/slick.min.js"></script>
+<script type="text/javascript" src="source/js/script1.js"></script>
+<script type="text/javascript" src="source/slick1/slick.min.js"></script>
 
 </body>
 </html>

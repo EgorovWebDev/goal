@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="source/css/help.css">
 
 </head>
-<section>
+<section class="help">
         <h2>Мужская обувь</h2>
             <section class="wrapper">
                 <ul class="size">

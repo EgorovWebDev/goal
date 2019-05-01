@@ -14,7 +14,7 @@
                     <input type="password" name="password" placeholder="Введите пароль" required><br> 
                 </p>
                 
-                <p class="login button"> 
+                <p class="login_button"> 
                 <input type="submit" name="do-auth" value="Войти"> 
                 </p>
                 <p class="change_link">
